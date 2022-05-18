@@ -1,4 +1,4 @@
-﻿using AlphaVenteApi.Models.Dtos;
+﻿using AlphaVenteApi.Dtos;
 using AlphaVenteData.model;
 using AutoMapper;
 

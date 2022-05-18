@@ -1,4 +1,4 @@
-﻿namespace AlphaVenteApi.Models.Dtos
+﻿namespace AlphaVenteApi.Dtos
 {
     public class CustomerResponseDto
     {
