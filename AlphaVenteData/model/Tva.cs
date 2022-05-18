@@ -9,7 +9,7 @@ namespace AlphaVenteData.model
     public class Tva
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public Double taux { get; set; }
 
     }

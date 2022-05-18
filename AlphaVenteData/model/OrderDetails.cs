@@ -15,7 +15,7 @@ namespace AlphaVenteData.model
         public Double PriceTTC { get; set; }
         public Double TotalRowHT { get; set; }
         public Double TotalRowTTC { get; set; }
-        public String Tva { get; set; }
+        public String? Tva { get; set; }
         public Double MountTvaU { get; set; }
         public Double TotalRowTva { get; set; }
         [ForeignKey("OrderId")]
