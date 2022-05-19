@@ -1,5 +1,7 @@
 using AlphaVenteApi.Data;
 using AlphaVenteApi.repositories;
+using AlphaVenteApi.Services;
+using AlphaVenteApi.unitOfWork;
 using AlphaVenteData.interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,8 +18,11 @@ builder.Services.AddSwaggerGen();
 
 //enregistrement dbContext
 builder.Services.AddDbContext<AlphaDbContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+builder.Services.AddAutoMapper(   typeof(MappingProfile).Assembly);
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(IServiceGeneric<,>), typeof(ServiceGeneric<,>));
+builder.Services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+//builder.Services.AddAllService();
 
 var app = builder.Build();
 
